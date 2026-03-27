@@ -1,0 +1,413 @@
+.dashboard {
+  padding: 32px 28px;
+  max-width: 1000px;
+}
+
+.dash-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+.dash-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.dash-header h1 {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+
+.dash-subtitle {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.quick-log-btn {
+  background: var(--accent);
+  color: #0e0e10;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 9px 16px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  margin-top: 6px;
+  transition: opacity 0.15s;
+}
+
+.quick-log-btn:hover { opacity: 0.85; }
+
+/* stat grid - intentionally slightly uneven gap */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: border-color 0.15s;
+}
+
+.stat-card:hover {
+  border-color: var(--border-light);
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-val {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  margin-top: 2px;
+}
+
+.stat-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.dash-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* --- Burn Rate Widget --- */
+.burn-rate-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.burn-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.burn-header h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.3px;
+}
+
+.burn-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.on-track-badge {
+  font-size: 0.75rem;
+  background: var(--accent-bg);
+  color: var(--accent);
+  padding: 3px 8px;
+  border-radius: 20px;
+  border: 1px solid var(--accent-dim);
+}
+
+.burn-main {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.burn-earned {
+  display: flex;
+  flex-direction: column;
+}
+
+.burn-amount {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.burn-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.burn-daily-val {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.burn-unit {
+  font-size: 0.7rem;
+}
+
+.burn-progress-wrap {
+  margin-bottom: 12px;
+}
+
+.burn-progress-track {
+  height: 6px;
+  background: var(--surface2);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.burn-progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
+
+.burn-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.burn-target-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.burn-target-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.burn-target-label:hover { color: var(--text); }
+
+.edit-hint {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  margin-left: 4px;
+}
+
+.burn-target-label:hover .edit-hint { color: var(--accent); }
+
+.burn-target-edit {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.burn-target-edit input {
+  background: var(--surface2);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 3px 8px;
+  color: var(--text);
+  font-size: 0.8rem;
+  width: 80px;
+}
+
+.burn-target-edit button {
+  background: var(--accent-bg);
+  color: var(--accent);
+  border: 1px solid var(--accent-dim);
+  border-radius: var(--radius-sm);
+  padding: 3px 8px;
+  font-size: 0.75rem;
+}
+
+.burn-target-edit button.cancel {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.days-left {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+/* --- Recent entries --- */
+.recent-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.recent-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.recent-header h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.3px;
+}
+
+.see-all {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  transition: color 0.15s;
+}
+.see-all:hover { color: var(--accent); }
+
+.recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.recent-entry {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.recent-entry:last-child { border-bottom: none; }
+
+.entry-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.entry-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.entry-desc {
+  display: block;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.entry-project {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+.entry-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1px;
+}
+
+.entry-duration {
+  font-size: 0.82rem;
+  color: var(--accent-dim);
+}
+
+.entry-date {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+}
+
+.empty-recent {
+  text-align: center;
+  padding: 24px 0;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.empty-action {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--accent);
+  font-size: 0.82rem;
+}
+
+/* responsive handled below */
+
+/* Empty state */
+.dash-empty {
+  margin-top: 20px;
+  background: var(--surface);
+  border: 1px dashed var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 60px 24px;
+  text-align: center;
+}
+.dash-empty-icon { font-size: 3rem; margin-bottom: 16px; }
+.dash-empty h2 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
+.dash-empty p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px; }
+.dash-empty-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.dash-empty-btn {
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.15s;
+}
+.dash-empty-btn.primary { background: var(--accent); color: #0e0e10; }
+.dash-empty-btn.primary:hover { opacity: 0.88; }
+.dash-empty-btn.secondary { background: var(--surface2); border: 1px solid var(--border-light); color: var(--text); }
+.dash-empty-btn.secondary:hover { border-color: var(--accent-dim); }
+
+/* ── Dashboard Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .dashboard { padding: 24px 20px; }
+  .stat-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .stat-val { font-size: 1.4rem; }
+}
+
+@media (max-width: 640px) {
+  .dashboard { padding: 16px; }
+  .dash-header { flex-direction: column; gap: 12px; margin-bottom: 20px; }
+  .dash-header h1 { font-size: 1.35rem; }
+  .quick-log-btn { width: 100%; text-align: center; justify-content: center; display: flex; }
+  .stat-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 16px; }
+  .stat-card { padding: 14px 12px; }
+  .stat-val { font-size: 1.25rem; }
+  .stat-label { font-size: 0.68rem; }
+  .dash-bottom { grid-template-columns: 1fr; gap: 12px; }
+  .burn-amount { font-size: 1.6rem; }
+  .burn-target-row { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .dash-empty { padding: 40px 16px; }
+}

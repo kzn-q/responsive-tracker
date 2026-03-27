@@ -1,0 +1,43 @@
+.otp-wrap {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.otp-cell {
+  width: 48px;
+  height: 56px;
+  background: var(--surface2);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--text);
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.1s;
+  outline: none;
+  caret-color: transparent;
+}
+
+.otp-cell:focus {
+  border-color: var(--accent-dim);
+  box-shadow: 0 0 0 3px rgba(200, 241, 53, 0.12);
+  transform: scale(1.04);
+}
+
+.otp-cell.filled {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@media (max-width: 400px) {
+  .otp-cell { width: 40px; height: 48px; font-size: 1.2rem; }
+  .otp-wrap { gap: 7px; }
+}
+
+@media (max-width: 380px) {
+  .otp-wrap { gap: 5px; }
+  .otp-cell { width: 36px; height: 44px; font-size: 1.1rem; }
+}
